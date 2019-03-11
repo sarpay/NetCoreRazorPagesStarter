@@ -1,0 +1,60 @@
+﻿@page 
+@model RazorPagesVizyoneks2.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    @* Razor View Engine *@
+
+    @*@Model.Title
+
+    @{ 
+        int a = 5;
+        int b = 10;
+    }
+
+     @{ 
+         int c = a * b;
+     } 
+
+    @c*@
+
+    @*@for (int i = 0; i < length; i++)
+    {
+
+    }
+
+    @if (true)
+    {
+
+    }
+
+    @foreach (var item in collection)
+    {
+
+    }*@
+
+
+    <ul>
+        @foreach (var item in Model.HomeVM.Categories)
+        {
+            
+            <li>@item.Name<a asp-page="Detail" asp-route-id="@item.Id" asp-route-name="@item.Name">Detay</a></li>
+        }
+    </ul>
+  
+
+
+
+</body>
+</html>

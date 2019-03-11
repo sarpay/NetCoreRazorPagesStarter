@@ -1,0 +1,28 @@
+﻿@page
+@model RazorPagesVizyoneks2.Pages.ProductAddModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProductAdd</title>
+</head>
+<body>
+
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <input asp-for="InputModel.Name" />
+        <span asp-validation-for="InputModel.Name"></span>
+        <input asp-for="InputModel.Price" />
+        <span asp-validation-for="InputModel.Price"></span>
+        <input asp-for="InputModel.Stock" />
+        <span asp-validation-for="InputModel.Stock"></span>
+        <input type="submit" asp-page-handler="Create" />
+    </form>
+
+</body>
+</html>
